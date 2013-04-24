@@ -1,0 +1,6 @@
+__NOTOC__
+==Konami Code for VB .net==
+A way to spice up school projects.
+
+===Disclaimer===
+I do not know enough about VB .net to not include the whole folder Visual Studios creates. Sorry. Other than this readme file everything has been done through Visual Studios 2010.
