@@ -7,13 +7,13 @@ When the specified key stroke pattern is entered in the proper order without int
 If any incorrect key strokes are entered or the pattern is not complete, the checkkey function will return false
 
 
-==How To Use==
+===How To Use===
 To use create a new instance of the class under the class declartion of the windows form in which you want to use it:
 
 '''vb.net
-Public Class Form1
-  ' Create an instance of the class
-  Private oKonami as new Konami
+  Public Class Form1
+    ' Create an instance of the class
+    Private oKonami as new Konami
 '''
 
 Then under the Load event of the form, tell it to intercept key presses before the code is sent to the controls
