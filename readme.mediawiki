@@ -1,8 +1,44 @@
 __NOTOC__
 ==Konami Code for VB .net==
-A way to spice up school projects.
+Custom Class for adding the Konami code.
 
-KonamiCodeforVB.net / KonamiCodeforVB.net / KonamiCodeExampleForm.vb is where all the good stuff is.
+When the specified key stroke pattern is entered in the proper order without interupting keystrokes, the checkkey function will return True.
+
+If any incorrect key strokes are entered or the pattern is not complete, the checkkey function will return false
+
+
+==How To Use==
+To use create a new instance of the class under the class declartion of the windows form in which you want to use it:
+
+'''vb.net
+Public Class Form1
+  ' Create an instance of the class
+  Private oKonami as new Konami
+'''
+
+Then under the Load event of the form, tell it to intercept key presses before the code is sent to the controls
+
+'''vb.net
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+      ' This will intercept the key events on this form
+      Me.KeyPreview = True  
+    End Sub
+'''
+
+Finally send the pressed keys to check for the correct pattern
+
+'''vb.net
+  Private Sub Form1_KeyUp(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
+    ' Send the Key press on its way, and get some logic going
+    If oKonami.checkKey(e.KeyCode) Then
+      ' Congrats, pattern match
+      MsgBox("Konami Code Entered")
+    End If
+  End Sub
+'''
+
 
 ===Disclaimer===
-I do not know enough about VB .net to not include the whole folder Visual Studios creates. Sorry. Other than this readme file everything has been done through Visual Studios 2010.
+Orignally references https://github.com/deplicator/KonamiCodeforVB.net 
+
+I have forked from there to provide a cleaner class file that can be implemented into any form.
