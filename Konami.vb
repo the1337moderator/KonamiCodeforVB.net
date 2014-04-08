@@ -8,8 +8,7 @@ Public Class Konami
 
     ' Hey new object, better set the important bits
     Public Sub New()
-        Me.sequence = New List(Of Boolean) From {False, False, False, False, False, False, False, False, False, False}
-        ix = 0
+        me.reset()
     End Sub
 
     ' Reset on pattern failure, or completion
