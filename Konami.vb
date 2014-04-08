@@ -26,7 +26,7 @@ Public Class Konami
         If sequence(ix) = False And keycode = KonamiOrder(ix) Then
             ' Hurray, they pressed the right key, better keep track of it
             sequence(ix) = True
-            ix = ix + 1
+            ix += 1
         Else
             ' Nope, reset
             Me.reset()
